@@ -18,7 +18,6 @@ async function init() {
     // Access exported WASM functions
     const wasm = instance.exports;
 
-
     function updateClock() {
         const timestamp = BigInt(Date.now());
         const seconds = BigInt(wasm.secondsSinceMidnight(timestamp));
